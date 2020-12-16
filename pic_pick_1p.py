@@ -5,7 +5,7 @@ RULES:
 - Target shape is shown on the right of the screen
 - Target shape is hidden under the white grid, and may be in different orientations
 - Click on the cells to reveal what is underneath 
-- GOAL is to find the HEAD of the shape in as less steps as possible
+- GOAL is to find the HEAD of the shape in as fewer steps as possible
 
 - Gray means you missed, and the target could be elsewhere
 - Blue means you have clicked on the target BODY, but not the Head
