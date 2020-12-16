@@ -13,4 +13,9 @@
 * Red means you have Successfully found the target HEAD
 * Try to deduce the correct position of the HEAD from the shape of the target and revealed cells
 
+## Game Screenshots
+![](Screenshot1.png)
+![](Screenshot2.png)
+![](Screenshot3.png)
+
 ## Future version may involve HARD MODE and PvP.

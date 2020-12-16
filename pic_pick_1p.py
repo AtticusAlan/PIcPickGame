@@ -96,7 +96,8 @@ def genArrow():
     head = []
     tail = []
     
-    while not head or not tail or any([i[0] not in range(0, ROWS) or i[1] not in range(0, COLUMNS) for i in tail]):
+    while not head or not tail or \
+        any([i[0] not in range(0, ROWS) or i[1] not in range(0, COLUMNS) for i in tail]):
         head = []
         tail = []
         head_row = random.randrange(ROWS)
