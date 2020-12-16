@@ -15,10 +15,10 @@
 
 ## Game Screenshots
 Game screen: <br>
-![](Screenshot1.png) <br>
+![](Screenshot1.png) <br><br>
 Win by find the RED HEAD: <br>
-![](Screenshot2.png) <br>
-The complete shape: <br>
+![](Screenshot2.png) <br><br>
+Example of a complete shape: <br>
 ![](Screenshot3.png)
 
 ## Future version may involve HARD MODE and PvP.
