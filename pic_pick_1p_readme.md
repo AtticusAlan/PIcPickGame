@@ -14,8 +14,11 @@
 * Try to deduce the correct position of the HEAD from the shape of the target and revealed cells
 
 ## Game Screenshots
-![](Screenshot1.png)
-![](Screenshot2.png)
+Game screen:
+![](Screenshot1.png) <br>
+Win by find the RED HEAD:
+![](Screenshot2.png) <br>
+The complete shape:
 ![](Screenshot3.png)
 
 ## Future version may involve HARD MODE and PvP.
