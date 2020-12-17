@@ -163,7 +163,7 @@ def clickGrid(win, grid, head, tail, steps):
     # User clicked empty space
     else: 
         # Make sure only register when user clicked inside the grid space
-        if 0 <= row <= ROWS and 0 <= column <= COLUMNS:
+        if 0 <= row <= ROWS-1 and 0 <= column <= COLUMNS-1:
             grid[row][column] = 9
             steps += 1
             print("empty")
