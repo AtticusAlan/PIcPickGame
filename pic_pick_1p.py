@@ -73,13 +73,13 @@ def genTail(head_row, head_column, dir):
             tail.append((head_row - i, head_column - i))
         for j in range(1,5):
             tail.append((head_row - j, head_column))
-    elif dir == 'left':
+    elif dir == 'right':
         for i in range(1,3):
             tail.append((head_row - i, head_column - i))
             tail.append((head_row + i, head_column - i))
         for j in range(1,5):
             tail.append((head_row, head_column - j))
-    else: # right
+    else: # left
         for i in range(1,3):
             tail.append((head_row - i, head_column + i))
             tail.append((head_row + i, head_column + i))
