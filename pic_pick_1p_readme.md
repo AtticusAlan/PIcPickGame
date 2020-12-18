@@ -23,4 +23,13 @@ Win by find the RED HEAD: <br>
 Example of a complete shape: <br>
 ![](Screenshot3.png)
 
-## Future version may involve HARD MODE and PvP.
+## HARD MODE
+* Three different shapes
+* GOAL is to find all 3 HEADs
+* Added new feature allow player to press and hold R to reveal the answer
+Game screen: <br>
+![](Screenshot4.png) <br><br>
+Reveal the answer: <br>
+![](Screenshot5.png)
+
+## Future version may PvP mode
