@@ -32,4 +32,4 @@ Game screen: <br>
 Reveal the answer: <br>
 ![](Screenshot5.png)
 
-## Future version may PvP mode
+## Future versions may involve a PvP mode
