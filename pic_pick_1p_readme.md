@@ -26,7 +26,7 @@ Example of a complete shape: <br>
 ## HARD MODE
 * Three different shapes
 * GOAL is to find all 3 HEADs
-* Added new feature allow player to press and hold R to reveal the answer
+* Added new feature allow player to press and hold R to reveal the answer<br>
 Game screen: <br>
 ![](Screenshot4.png) <br><br>
 Reveal the answer: <br>
