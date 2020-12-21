@@ -347,8 +347,8 @@ def endScreen(win, steps):
             if event.type == pygame.QUIT:
                 run = False 
                 pygame.quit()
-            # if event.type == pygame.KEYDOWN or event.type == pygame.MOUSEBUTTONDOWN:
-            if event.type == pygame.MOUSEBUTTONDOWN:
+            if event.type == pygame.KEYDOWN or event.type == pygame.MOUSEBUTTONDOWN:
+            # if event.type == pygame.MOUSEBUTTONDOWN:
                 run = False
                 # Pause for 1 sec
                 pygame.time.delay(1000)
