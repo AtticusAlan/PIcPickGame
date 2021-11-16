@@ -15,6 +15,7 @@ RULES:
 
 import pygame 
 import random 
+import sys
 pygame.init() 
 
 # Define some colors
@@ -40,8 +41,10 @@ WIN_SIZE = [(WIDTH + MARGIN) * COLUMNS + MARGIN + SIDEWIDTH,
             (HEIGHT + MARGIN) * ROWS + MARGIN]
 
 # Define font to use
-STAT_FONT = pygame.font.SysFont("comicsans", 50)
-SMALL_FONT = pygame.font.SysFont("comicsans", 30)
+# STAT_FONT = pygame.font.SysFont("comicsans", 50)
+# SMALL_FONT = pygame.font.SysFont("comicsans", 30)
+STAT_FONT = pygame.font.SysFont("SimHei", 35)
+SMALL_FONT = pygame.font.SysFont("SimHei", 25)
 
 
 def genGrid():
@@ -140,36 +143,41 @@ def drawGrid(win, grid, steps, found):
     pygame.display.update()
     
     
-def clickGrid(win, grid, head, tail, steps):
+def clickGrid(win, grid, head, tail):
     # User clicks the mouse. Get the position
     pos = pygame.mouse.get_pos()
     # Change the (x, y) screen coordinates to grid coordinates
     column = pos[0] // (WIDTH + MARGIN)
     row = pos[1] // (HEIGHT + MARGIN)
 
-    # User clicked the head
-    if (row, column) in head: 
-        grid[row][column] = 2
-        steps += 1
-        pygame.time.delay(100)
-        # found = True
-        print("head!")
-        # endScreen(win, steps)
-    # User clicked the tail
-    elif (row, column) in tail:
-        grid[row][column] = 1
-        steps += 1
-        print("tail!")
-    # User clicked empty space
-    else: 
-        # Make sure only register when user clicked inside the grid space
-        if 0 <= row <= ROWS-1 and 0 <= column <= COLUMNS-1:
+    # Make sure only register when user clicked inside the grid space
+    # user clicked a new grid
+    steps = 0
+    if 0 <= row <= ROWS-1 and 0 <= column <= COLUMNS-1 and grid[row][column] == 0:
+        # User clicked the head
+        if (row, column) in head: 
+            grid[row][column] = 2
+            steps = 1
+            pygame.time.delay(100)
+            # found = True
+            print("head!")
+            # endScreen(win, steps)
+        # User clicked the tail
+        elif (row, column) in tail:
+            grid[row][column] = 1
+            steps = 1
+            print("tail!")
+        # User clicked empty space
+        else: 
+            # # Make sure only register when user clicked inside the grid space
+            # if 0 <= row <= ROWS-1 and 0 <= column <= COLUMNS-1:
             grid[row][column] = 9
-            steps += 1
+            steps = 1
             print("empty")
-    # print("Click ", pos, "Grid coordinates: ", row, column)  
+        # print("Click ", pos, "Grid coordinates: ", row, column)  
 
-    return grid
+    # return grid
+    return steps
 
 
 def drawSampleArrow(win):
@@ -242,13 +250,15 @@ def main():
             if event.type == pygame.QUIT:
                 run = False 
             elif event.type == pygame.MOUSEBUTTONDOWN:
-                clickGrid(win, grid, head, tail, steps)
-                steps += 1
+                steps += clickGrid(win, grid, head, tail)
+                # steps += 1
             
         drawGrid(win, grid, steps, found)
     
     pygame.display.quit()
     pygame.quit()
-    quit()
+    sys.exit()
+    # quit()
                
+# if __name__ == "__main__":
 main()               
